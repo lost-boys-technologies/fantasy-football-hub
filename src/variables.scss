@@ -1,0 +1,57 @@
+// Media Queries
+// --------------------
+$screen-xs-min: 425px;
+$screen-sm-min: 500px;
+$screen-md-min: 720px;
+$screen-lg-min: 960px;
+$screen-xl-min: 1200px;
+
+// Media Query Mixins
+// --------------------
+@mixin xsmall { @media (min-width: #{$screen-xs-min}) {@content;} }
+@mixin small { @media (min-width: #{$screen-sm-min}) {@content;} }
+@mixin medium { @media (min-width: #{$screen-md-min}) {@content;} }
+@mixin large { @media (min-width: #{$screen-lg-min}) {@content;} }
+@mixin xlarge { @media (min-width: #{$screen-xl-min}) {@content;} }
+
+// Containers
+// --------------------
+$min-width: 320px;
+$sm-max-width: 1200px;
+$max-width: 1440px;
+$lg-max-width: 1680px;
+$full-width: 100%;
+
+// Typography
+// --------------------
+$helvetica-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$arial-font-family: 'Arial Narrow', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$georgia-font-family: Georgia, Times, 'Times New Roman', serif;
+$open-sans-font-family: 'Open Sans', 'Lato', 'Roboto', Helvetica, Arial, sans-serif;
+$test: 'Ubuntu';
+
+$h1-font-size: 24px;
+$h2-font-size: 18px;
+$h3-font-size: 16px;
+$xs-font-size: 12px;
+$sm-font-size: 14px;
+$md-font-size: 16px;
+$lg-font-size: 18px;
+$xl-font-size: 20px;
+$xxl-font-size: 22px;
+
+// Colors
+// --------------------
+
+// General
+$white-color: #FFF;
+$black-color: #000;
+$red-color: #E81B00;
+
+// Project Specific
+$cyan-color: #9FC7D9;
+$cyan-blue-color: #244F7B;
+$gold-color: #F6B516;
+$ivory-color: #F6EFE3;
+
+#244F7B
