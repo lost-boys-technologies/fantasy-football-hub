@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <header className="header-container">
         <Router>
-          <div className="routes">
-            <ul>
+          <div>
+            <ul className="nav-links">
               <li>
                 <Link to="/">Home</Link>
               </li>

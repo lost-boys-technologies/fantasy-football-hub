@@ -1,0 +1,16 @@
+.App {
+  .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+  
+    li { text-decoration: none; }
+  }
+}
