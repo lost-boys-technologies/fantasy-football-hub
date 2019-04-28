@@ -1,16 +1,25 @@
+@import './variables';
+
 .App {
   .header-container {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .nav-links {
+  .router-container { width: 100%; }
+
+  .nav-link-container {
     list-style: none;
     display: flex;
-    text-decoration: none;
+    justify-content: flex-end;
+    padding-right: 30px;
   
-    li { text-decoration: none; }
+    li { padding: 0 10px; }
+
+    .nav-link {
+      color: $cyan-blue-color;
+      text-decoration: none;
+    }
   }
 }

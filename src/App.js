@@ -7,25 +7,25 @@ function App() {
     <div className="App">
       <header className="header-container">
         <Router>
-          <div>
-            <ul className="nav-links">
+          <div className="router-container">
+            <ul className="nav-link-container">
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" className="nav-link">Home</Link>
               </li>
               <li>
-                <Link to="/about">About Us</Link>
+                <Link to="/about" className="nav-link">About Us</Link>
               </li>
               <li>
-                <Link to="/members">Members</Link>
+                <Link to="/members" className="nav-link">Members</Link>
               </li>
               <li>
-                <Link to="/constitution">Constitution</Link>
+                <Link to="/constitution" className="nav-link">Constitution</Link>
               </li>
               <li>
-                <Link to="/rules">Rules</Link>
+                <Link to="/rules" className="nav-link">Rules</Link>
               </li>
               <li>
-                <Link to="/bets">Bets</Link>
+                <Link to="/bets" className="nav-link">Bets</Link>
               </li>
             </ul>
 
