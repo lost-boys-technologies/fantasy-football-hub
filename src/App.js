@@ -1,5 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Home from './Home'
+import About from './About';
+import Members from './Members';
+import Constitution from './Constitution';
+import Rules from './Rules';
+import Bets from './Bets';
 import './App.scss';
 
 function App() {
@@ -45,42 +51,5 @@ function App() {
     </div>
   );
 }
-
-function Home() {
-  return (
-    <h2>Home</h2>
-  )
-}
-
-function About() {
-  return (
-    <h2>About Us</h2>
-  )
-}
-
-function Members() {
-  return (
-    <h2>League Members</h2>
-  )
-}
-
-function Constitution() {
-  return (
-    <h2>League Constitution</h2>
-  )
-}
-
-function Rules() {
-  return (
-    <h2>League Rules</h2>
-  )
-}
-
-function Bets() {
-  return (
-    <h2>League Bets</h2>
-  )
-}
-
 
 export default App;
