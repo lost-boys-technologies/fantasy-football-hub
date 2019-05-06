@@ -1,16 +1,2497 @@
 @import '../Variables';
 
+/*
+  Inspired by: "Error, 404"
+  By: Sujeet Mishra
+  Link: https://dribbble.com/shots/4571035-Error-404
+*/
+
 .not-found-container {
-    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 12px;
+    background-image: linear-gradient(to right bottom, #a9347e, #4b32a7);
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.2px;
+    color: $white-color;
 
-    p {
-        font-size: 30px;
-        font-weight: 800;
-        margin-bottom: 10px
-    }
+    .center {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+        transition: transform 0.5s, -webkit-transform 0.5s;
+        z-index: 1;
+      }
+      
+      @media screen and (max-height: 600px) {
+        .center {
+          -webkit-transform: translate(-50%, -50%) scale(0.75);
+          transform: translate(-50%, -50%) scale(0.75);
+        }
+      }
+      
+      @media screen and (max-width: 400px) {
+        .center {
+          -webkit-transform: translate(-50%, -50%) scale(0.6);
+          transform: translate(-50%, -50%) scale(0.6);
+        }
+      }
+      
+      .star {
+        position: absolute;
+        z-index: 1;
+        &:nth-child(1) {
+          top: 17vh;
+          left: 97vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(2) {
+          top: 57vh;
+          left: 90vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -2s;
+            animation-delay: -2s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(3) {
+          top: 9vh;
+          left: 98vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -3s;
+            animation-delay: -3s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(4) {
+          top: 0vh;
+          left: 35vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(5) {
+          top: 19vh;
+          left: 39vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -5s;
+            animation-delay: -5s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(6) {
+          top: 19vh;
+          left: 37vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -6s;
+            animation-delay: -6s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(7) {
+          top: 59vh;
+          left: 36vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -7s;
+            animation-delay: -7s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(8) {
+          top: 48vh;
+          left: 80vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -8s;
+            animation-delay: -8s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(9) {
+          top: 61vh;
+          left: 40vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -9s;
+            animation-delay: -9s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(10) {
+          top: 70vh;
+          left: 69vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -10s;
+            animation-delay: -10s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(11) {
+          top: 78vh;
+          left: 11vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -11s;
+            animation-delay: -11s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(12) {
+          top: 17vh;
+          left: 72vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -12s;
+            animation-delay: -12s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(13) {
+          top: 60vh;
+          left: 14vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -13s;
+            animation-delay: -13s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(14) {
+          top: 66vh;
+          left: 83vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -14s;
+            animation-delay: -14s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(15) {
+          top: 3vh;
+          left: 16vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -15s;
+            animation-delay: -15s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(16) {
+          top: 64vh;
+          left: 33vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -16s;
+            animation-delay: -16s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(17) {
+          top: 47vh;
+          left: 61vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -17s;
+            animation-delay: -17s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(18) {
+          top: 45vh;
+          left: 39vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -18s;
+            animation-delay: -18s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(19) {
+          top: 25vh;
+          left: 49vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -19s;
+            animation-delay: -19s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(20) {
+          top: 41vh;
+          left: 38vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -20s;
+            animation-delay: -20s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(21) {
+          top: 88vh;
+          left: 13vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -21s;
+            animation-delay: -21s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(22) {
+          top: 30vh;
+          left: 15vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -22s;
+            animation-delay: -22s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(23) {
+          top: 45vh;
+          left: 46vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -23s;
+            animation-delay: -23s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(24) {
+          top: 6vh;
+          left: 12vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -24s;
+            animation-delay: -24s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(25) {
+          top: 35vh;
+          left: 44vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -25s;
+            animation-delay: -25s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(26) {
+          top: 89vh;
+          left: 74vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -26s;
+            animation-delay: -26s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(27) {
+          top: 8vh;
+          left: 1vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -27s;
+            animation-delay: -27s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(28) {
+          top: 74vh;
+          left: 71vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -28s;
+            animation-delay: -28s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(29) {
+          top: 91vh;
+          left: 3vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -29s;
+            animation-delay: -29s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(30) {
+          top: 70vh;
+          left: 59vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -30s;
+            animation-delay: -30s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(31) {
+          top: 56vh;
+          left: 30vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -31s;
+            animation-delay: -31s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(32) {
+          top: 67vh;
+          left: 52vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -32s;
+            animation-delay: -32s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(33) {
+          top: 32vh;
+          left: 49vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -33s;
+            animation-delay: -33s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(34) {
+          top: 69vh;
+          left: 96vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -34s;
+            animation-delay: -34s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(35) {
+          top: 73vh;
+          left: 77vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -35s;
+            animation-delay: -35s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(36) {
+          top: 45vh;
+          left: 49vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -36s;
+            animation-delay: -36s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(37) {
+          top: 53vh;
+          left: 82vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -37s;
+            animation-delay: -37s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(38) {
+          top: 46vh;
+          left: 29vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -38s;
+            animation-delay: -38s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(39) {
+          top: 28vh;
+          left: 76vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -39s;
+            animation-delay: -39s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(40) {
+          top: 66vh;
+          left: 48vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -40s;
+            animation-delay: -40s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(41) {
+          top: 40vh;
+          left: 8vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -41s;
+            animation-delay: -41s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(42) {
+          top: 75vh;
+          left: 39vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -42s;
+            animation-delay: -42s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(43) {
+          top: 31vh;
+          left: 20vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -43s;
+            animation-delay: -43s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(44) {
+          top: 49vh;
+          left: 69vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -44s;
+            animation-delay: -44s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(45) {
+          top: 13vh;
+          left: 81vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -45s;
+            animation-delay: -45s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(46) {
+          top: 54vh;
+          left: 49vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -46s;
+            animation-delay: -46s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(47) {
+          top: 83vh;
+          left: 11vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -47s;
+            animation-delay: -47s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(48) {
+          top: 22vh;
+          left: 40vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -48s;
+            animation-delay: -48s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(49) {
+          top: 74vh;
+          left: 88vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -49s;
+            animation-delay: -49s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(50) {
+          top: 22vh;
+          left: 31vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -50s;
+            animation-delay: -50s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(51) {
+          top: 25vh;
+          left: 44vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -51s;
+            animation-delay: -51s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(52) {
+          top: 3vh;
+          left: 39vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -52s;
+            animation-delay: -52s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(53) {
+          top: 15vh;
+          left: 90vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -53s;
+            animation-delay: -53s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(54) {
+          top: 20vh;
+          left: 60vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -54s;
+            animation-delay: -54s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(55) {
+          top: 4vh;
+          left: 87vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -55s;
+            animation-delay: -55s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(56) {
+          top: 39vh;
+          left: 86vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -56s;
+            animation-delay: -56s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(57) {
+          top: 68vh;
+          left: 64vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -57s;
+            animation-delay: -57s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(58) {
+          top: 91vh;
+          left: 39vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -58s;
+            animation-delay: -58s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(59) {
+          top: 71vh;
+          left: 86vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -59s;
+            animation-delay: -59s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(60) {
+          top: 10vh;
+          left: 89vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -60s;
+            animation-delay: -60s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(61) {
+          top: 37vh;
+          left: 42vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -61s;
+            animation-delay: -61s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(62) {
+          top: 19vh;
+          left: 48vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -62s;
+            animation-delay: -62s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(63) {
+          top: 10vh;
+          left: 20vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -63s;
+            animation-delay: -63s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(64) {
+          top: 68vh;
+          left: 54vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -64s;
+            animation-delay: -64s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(65) {
+          top: 88vh;
+          left: 88vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -65s;
+            animation-delay: -65s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(66) {
+          top: 13vh;
+          left: 57vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -66s;
+            animation-delay: -66s;
+          }
+          &:before {
+            top: 2px;
+            left: -2px;
+            width: 12px;
+            height: 4px;
+          }
+          &:after {
+            top: -2px;
+            left: 2px;
+            width: 4px;
+            height: 12px;
+          }
+        }
+        &:nth-child(67) {
+          top: 23vh;
+          left: 74vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -67s;
+            animation-delay: -67s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(68) {
+          top: 66vh;
+          left: 89vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -68s;
+            animation-delay: -68s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(69) {
+          top: 32vh;
+          left: 8vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -69s;
+            animation-delay: -69s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(70) {
+          top: 3vh;
+          left: 45vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -70s;
+            animation-delay: -70s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(71) {
+          top: 20vh;
+          left: 98vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -71s;
+            animation-delay: -71s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(72) {
+          top: 17vh;
+          left: 4vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -72s;
+            animation-delay: -72s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(73) {
+          top: 18vh;
+          left: 95vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -73s;
+            animation-delay: -73s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(74) {
+          top: 66vh;
+          left: 74vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -74s;
+            animation-delay: -74s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(75) {
+          top: 42vh;
+          left: 6vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -75s;
+            animation-delay: -75s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(76) {
+          top: 96vh;
+          left: 28vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -76s;
+            animation-delay: -76s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(77) {
+          top: 10vh;
+          left: 5vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -77s;
+            animation-delay: -77s;
+          }
+          &:before {
+            top: 1px;
+            left: -1px;
+            width: 6px;
+            height: 2px;
+          }
+          &:after {
+            top: -1px;
+            left: 1px;
+            width: 2px;
+            height: 6px;
+          }
+        }
+        &:nth-child(78) {
+          top: 70vh;
+          left: 36vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -78s;
+            animation-delay: -78s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+        &:nth-child(79) {
+          top: 64vh;
+          left: 98vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -79s;
+            animation-delay: -79s;
+          }
+          &:before {
+            top: 0.5px;
+            left: -0.5px;
+            width: 3px;
+            height: 1px;
+          }
+          &:after {
+            top: -0.5px;
+            left: 0.5px;
+            width: 1px;
+            height: 3px;
+          }
+        }
+        &:nth-child(80) {
+          top: 23vh;
+          left: 75vw;
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            background-color: $white-color;
+            border-radius: 10px;
+            -webkit-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+            -webkit-animation-delay: -80s;
+            animation-delay: -80s;
+          }
+          &:before {
+            top: 1.5px;
+            left: -1.5px;
+            width: 9px;
+            height: 3px;
+          }
+          &:after {
+            top: -1.5px;
+            left: 1.5px;
+            width: 3px;
+            height: 9px;
+          }
+        }
+      }
+      
+      .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+      
+      .circle--outer {
+        width: 550px;
+        height: 550px;
+        background-image: linear-gradient(to right bottom, #802b89, #5631a1);
+        box-shadow: 0px 0px 20px -8px #000;
+      }
+      
+      .circle--inner {
+        width: 355px;
+        height: 355px;
+        background-image: linear-gradient(to right bottom, #75278b, #5530a2);
+        box-shadow: 0px 0px 20px -8px #000;
+      }
+      
+      .four {
+        position: absolute;
+        font-size: 150px;
+        font-weight: 900;
+        text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      .four--1 {
+        top: 100px;
+        left: 30px;
+        z-index: 1;
+      }
+      
+      .four--2 {
+        top: 100px;
+        left: 230px;
+        z-index: 3;
+      }
+      
+      .astronaut {
+        position: absolute;
+        top: -115px;
+        left: -30px;
+        -webkit-transform: rotate(17deg);
+        transform: rotate(17deg);
+        .astronaut-backpack {
+          width: 100px;
+          height: 100px;
+          background-color: #e3e3e3;
+          border-radius: 10px;
+        }
+        .antena--left {
+          left: 10px;
+        }
+        .antena--right {
+          right: 10px;
+        }
+        .astronaut-antena {
+          position: absolute;
+          top: -7px;
+          .ear-down {
+            position: absolute;
+            bottom: -5px;
+            width: 15px;
+            height: 20px;
+            border-radius: 5px;
+            background-color: #afafaf;
+            z-index: 1;
+          }
+          .ear-up {
+            position: relative;
+            width: 15px;
+            height: 20px;
+            border-radius: 5px;
+            background-color: #c3c3c3;
+            z-index: 2;
+          }
+          .antena {
+            position: absolute;
+            top: -29px;
+            width: 2px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #c3c3c3;
+          }
+          .antena-tip {
+            position: absolute;
+            top: -33px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #c3c3c3;
+          }
+        }
+        .antena--left .antena {
+          left: 5px;
+        }
+        .antena--right .antena {
+          right: 5px;
+        }
+        .antena--left .antena-tip {
+          left: 3px;
+        }
+        .antena--right .antena-tip {
+          right: 3px;
+        }
+        .astronaut-helmet {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          width: 66px;
+          height: 66px;
+          border-radius: 50%;
+          background-color: $white-color;
+          box-shadow: 0px 5px 1px -3px #808080;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          z-index: 3;
+          overflow: hidden;
+        }
+        .astronaut-glass {
+          position: absolute;
+          top: 13px;
+          left: 5px;
+          width: 56px;
+          height: 56px;
+          background: #00202e;
+          border-radius: 10px;
+        }
+        .glow {
+          position: absolute;
+          border-radius: 50%;
+          background-color: #334d57;
+        }
+        .glow--1 {
+          top: 25px;
+          left: 15px;
+          width: 17px;
+          height: 17px;
+        }
+        .glow--2 {
+          top: 44px;
+          left: 13px;
+          width: 7px;
+          height: 7px;
+        }
+        .astronaut-body {
+          position: absolute;
+          top: 30px;
+          left: 50%;
+          width: 50px;
+          height: 50px;
+          background-color: #c3c3c3;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+      }
+      
+      .astronaut-wire {
+        position: absolute;
+        top: -40px;
+        left: -260px;
+      }
+      
+      .astronaut-hands {
+        position: absolute;
+        top: -89px;
+        left: -23px;
+        width: 100px;
+        -webkit-transform: rotate(17deg);
+        transform: rotate(17deg);
+        z-index: 3;
+        .astronaut-hand {
+          position: absolute;
+        }
+        .hand--left {
+          left: -3px;
+        }
+        .hand--right {
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          right: -3px;
+        }
+      }
+      
+      .oh {
+        transition: all 0.1s linear;
+        -webkit-animation: floating 4s linear infinite;
+        animation: floating 4s linear infinite;
+        z-index: 2;
+      }
+      
+      .planet {
+        background-color: #ff4980;
+        box-shadow: inset -6px -10px 0px 1px #cc3b6b, 0px 2px 10px rgba(0, 0, 0, 0.4);
+        width: 155px;
+        height: 155px;
+      }
+      
+      .craters {
+        .crater {
+          position: absolute;
+          border-radius: 50%;
+          background-color: #c93667;
+        }
+        .crater--1 {
+          width: 35px;
+          height: 35px;
+          top: 30px;
+          left: 25px;
+        }
+        .crater--2 {
+          width: 23px;
+          height: 23px;
+          top: 20px;
+          left: 93px;
+        }
+        .crater--3 {
+          width: 17px;
+          height: 17px;
+          top: 77px;
+          left: 17px;
+        }
+        .crater--4 {
+          width: 10px;
+          height: 10px;
+          top: 90px;
+          left: 80px;
+        }
+        .crater--5 {
+          width: 25px;
+          height: 25px;
+          top: 115px;
+          left: 50px;
+        }
+        .crater--6 {
+          width: 13px;
+          height: 13px;
+          top: 118px;
+          left: 105px;
+        }
+      }
+      
+      .button {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        padding: 8px 12px;
+        border: 1px solid $white-color;
+        border-radius: 3px;
+        cursor: pointer;
+        z-index: 999;
+        &:active {
+          -webkit-transform: translateX(-50%) scale(0.95);
+          transform: translateX(-50%) scale(0.95);
+        }
 
-    a {
-        text-decoration: none;
-        color: $black-color;
-    }
+        &.go-home-button {
+            text-decoration: none;
+            color: $white-color;
+        }
+      }
+      
+      .sorry {
+        position: absolute;
+        top: 210px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        font-size: 15px;
+      }
+      
+      @-webkit-keyframes blink {
+        0%, 100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          opacity: 0.5;
+        }
+      }
+      
+      
+      @keyframes blink {
+        0%, 100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          opacity: 0.5;
+        }
+      }
+      
+      
+      @-webkit-keyframes floating {
+        0%, 100% {
+          -webkit-transform: translate(3px, 0px) rotate(-2deg);
+          transform: translate(3px, 0px) rotate(-2deg);
+        }
+      
+        20% {
+          -webkit-transform: translate(-3px, 1px) rotate(-2deg);
+          transform: translate(-3px, 1px) rotate(-2deg);
+        }
+      
+        40% {
+          -webkit-transform: translate(2px, 0px) rotate(1deg);
+          transform: translate(2px, 0px) rotate(1deg);
+        }
+      
+        60% {
+          -webkit-transform: translate(-2px, 3px) rotate(-1deg);
+          transform: translate(-2px, 3px) rotate(-1deg);
+        }
+      
+        80% {
+          -webkit-transform: translate(-2px, 2px) rotate(1deg);
+          transform: translate(-2px, 2px) rotate(1deg);
+        }
+      }
+      
+      
+      @keyframes floating {
+        0%, 100% {
+          -webkit-transform: translate(3px, 0px) rotate(-2deg);
+          transform: translate(3px, 0px) rotate(-2deg);
+        }
+      
+        20% {
+          -webkit-transform: translate(-3px, 1px) rotate(-2deg);
+          transform: translate(-3px, 1px) rotate(-2deg);
+        }
+      
+        40% {
+          -webkit-transform: translate(2px, 0px) rotate(1deg);
+          transform: translate(2px, 0px) rotate(1deg);
+        }
+      
+        60% {
+          -webkit-transform: translate(-2px, 3px) rotate(-1deg);
+          transform: translate(-2px, 3px) rotate(-1deg);
+        }
+      
+        80% {
+          -webkit-transform: translate(-2px, 2px) rotate(1deg);
+          transform: translate(-2px, 2px) rotate(1deg);
+        }
+      }
 }
+
+  
