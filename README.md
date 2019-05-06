@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Fantasy Football Hub
 
+Currently resides [here](https://fantasy-football-hub.netlify.com/)
+
 Initially just going to be a landing page for members of my fantasy football league. Additional features that I would like to include goes as follows:
 
 - League member info
