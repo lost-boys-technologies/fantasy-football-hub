@@ -1,5 +1,15 @@
 import React from 'react';
+import './404.scss';
 
-const NotFound = () => <h1>Not Found</h1>
+function NotFound() {
+    return(
+        <React.Fragment>
+            <div className="not-found-container">
+                <p>Not Found</p>
+                <a href="/">Take me home!</a>
+            </div>
+        </React.Fragment>
+    )
+}
 
 export default NotFound;
