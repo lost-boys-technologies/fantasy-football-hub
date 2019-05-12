@@ -1,1 +1,14 @@
 @import './variables';
+
+body {
+    min-width: $screen-md-min;
+}
+
+h2 {
+    text-align: center;
+}
+
+// Main container for all views
+.spa-container {
+    padding: 0 15px;
+}

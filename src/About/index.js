@@ -2,9 +2,9 @@ import React from 'react';
 
 function About() {
   return (
-    <React.Fragment>
+    <div className="spa-container">
         <h2>About Us</h2>
-    </React.Fragment>
+    </div>
   )
 }
 

@@ -3,10 +3,10 @@ import './App.scss';
 
 function App() {
   return (
-    <React.Fragment>
+    <div className="spa-container">
         <h2>Home</h2>
         <p>More to come...</p>
-    </React.Fragment>
+    </div>
   )
 }
 

@@ -3,9 +3,9 @@ import './Constitution.scss';
 
 function Constitution() {
   return (
-    <React.Fragment>
+    <div className="spa-container">
         <h2>Constitution</h2>
-    </React.Fragment>
+    </div>
   )
 }
 

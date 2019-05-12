@@ -3,9 +3,9 @@ import './Members.scss';
 
 function Members() {
   return (
-    <React.Fragment>
+    <div className="spa-container">
         <h2>Members</h2>
-    </React.Fragment>
+    </div>
   )
 }
 

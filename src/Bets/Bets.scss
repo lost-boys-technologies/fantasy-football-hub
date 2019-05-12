@@ -1,1 +1,17 @@
 @import '../variables';
+
+.bets-container {
+    display: flex;
+    width: 100%;
+    border: 1px solid red; //! temporary
+}
+
+h4 { text-align: center; }
+
+.pending-bets {
+    flex-basis: 50%;
+}
+
+.established-bets {
+    flex-basis: 50%;
+}

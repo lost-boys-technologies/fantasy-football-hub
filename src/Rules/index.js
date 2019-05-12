@@ -3,9 +3,9 @@ import './Rules.scss';
 
 function Rules() {
   return (
-    <React.Fragment>
+    <div className="spa-container">
         <h2>Rules</h2>
-    </React.Fragment>
+    </div>
   )
 }
 

@@ -3,9 +3,17 @@ import './Bets.scss';
 
 function Bets() {
   return (
-    <React.Fragment>
+    <div className="spa-container">
         <h2>Bets</h2>
-    </React.Fragment>
+        <div className="bets-container">
+          <div className="pending-bets">
+            <h4>Pending Bets</h4>
+          </div>
+          <div className="established-bets">
+          <h4>Established Bets</h4>
+          </div>
+        </div>
+    </div>
   )
 }
 
