@@ -2,8 +2,6 @@ import React from 'react';
 import './Bets.scss';
 import { stat } from 'fs';
 
-let statStyles = ['bet-status']
-
 const status = {
   pend: 'PENDING',
   done: 'COMPLETE',
@@ -20,8 +18,8 @@ function Bets() {
           <div className="established-bets">
           <h4>Established Bets</h4>
           <div className="bet-card">
-            <div className={statStyles.join(' ')}>
-              {status.done}
+            <div className='bet-status'>
+              {status.pend}
             </div>
             <div className="bet-details">
               Name
