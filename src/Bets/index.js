@@ -22,7 +22,8 @@ function Bets() {
               {status.pend}
             </div>
             <div className="bet-details">
-              Name
+              <span className="bettor">Bettor</span>
+              <span className="bettor-name">Lorem Ipsum</span>
             </div>
           </div>
           </div>

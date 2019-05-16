@@ -17,7 +17,7 @@ h4 { text-align: center; }
 
     .bet-card {
         display: flex;
-        height: 100px;
+        height: 75px;
         width: 100%;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         background-color: $light-grey-color;
@@ -27,17 +27,25 @@ h4 { text-align: center; }
             display: flex;
             align-items: center;
             padding: 0 15px;
-            border-right: 1px solid $black-color;
-
-            &.status-yellow { background-color: #feca57 }
-
-            &.status-green { background-color: #1dd1a1 }
+            margin: 10px 0;
+            border-right: 1px solid $cyan-blue-color;
         }
 
         .bet-details {
             display: flex;
-            flex-direction: row;
-            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 15px;
+
+            .bettor {
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            .bettor-name {
+
+            }
         }
     }    
 } 
