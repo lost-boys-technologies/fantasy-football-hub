@@ -1,6 +1,5 @@
 import React from 'react';
 import './Bets.scss';
-import { stat } from 'fs';
 
 const status = {
   pend: 'PENDING',

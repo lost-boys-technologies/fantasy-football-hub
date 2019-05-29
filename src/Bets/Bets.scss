@@ -3,7 +3,6 @@
 .bets-container {
     display: flex;
     width: 100%;
-    // border: 1px solid red; //! temporary
 }
 
 h4 { text-align: center; }
@@ -43,9 +42,7 @@ h4 { text-align: center; }
                 text-transform: uppercase;
             }
 
-            .bettor-name {
-
-            }
+            .bettor-name {}
         }
     }    
 } 
