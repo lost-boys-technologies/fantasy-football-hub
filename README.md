@@ -13,5 +13,3 @@ Initially just going to be a landing page for members of my fantasy football lea
 - League Achievements
 - League member stats
 - And much, much more
-
-Obviously this will all be behind good 'ol OAuth. Not that I don't trust you. Yeah, you who is reading this. I mean, I could just be talking to myself because I'm not that cool of a dude to where people I don't know would be reading this...
