@@ -5,7 +5,10 @@
     width: 100%;
 }
 
-h4 { text-align: center; }
+h4 {
+    text-align: center;
+    padding: 20px 0;
+}
 
 .pending-bets {
     flex-basis: 50%;
