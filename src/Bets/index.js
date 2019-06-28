@@ -26,8 +26,8 @@ function Bets() {
           {status.pend}
         </div>
         <div className="bet-details">
-          <span className="bettor">Bettor</span>
-          <span className="bettor-name">Lorem Ipsum</span>
+          <Typography variant="inherit" component="span" className="bettor">Bettor</Typography>
+          <Typography variant="inherit" component="span" className="bettor-name">Lorem Ipsum</Typography>
         </div>
       </div>
       </div>
