@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 
+import './Navigation.scss';
+
 const Navbar = () => {
     return (
-        <nav className="navbar-container">
+        <nav className="nav-link-container">
+                <Link to="/" className="nav-link group-icon">Running Backs of Scotland</Link>
             <div className="links-container">
-                <Link to="/" className="">LSTBYS</Link>
                 <SignedInLinks />
-                <SignedOutLinks />
+                {/* <SignedOutLinks /> */}
             </div>
         </nav>
     )

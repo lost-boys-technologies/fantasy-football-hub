@@ -1,11 +1,13 @@
 import React from 'react'
 
-function index() {
+function Home() {
     return (
         <div>
-            Welcome
+            <div className="spa-container">
+                <h2>Welcome to Your Fantasy Football Hub</h2>
+            </div>
         </div>
     )
 }
 
-export default index
+export default Home

@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.nav-link-container {
+    background-color: $cyan-blue-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    li { padding: 0 10px; }
+
+    .nav-link {
+        color: $ivory-color;
+        text-decoration: none;
+    }
+
+    .links-container {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .group-icon {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0 10px;
+    }
+}

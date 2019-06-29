@@ -1,16 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import './Navigation.scss';
+
 const SignedInLinks = () => {
     return (
-        <ul className="">
-            <li><NavLink to="/about">About Us</NavLink></li>
-            <li><NavLink to="/members">Members</NavLink></li>
-            <li><NavLink to="/constitution">Constitution</NavLink></li>
-            <li><NavLink to="/rules">Rules</NavLink></li>
-            <li><NavLink to="/bets">Bets</NavLink></li>
-            <li><NavLink to="/signout">Sign Out</NavLink></li>
-            <li><NavLink to="/profile">KH</NavLink></li>
+        <ul className="nav-link-container">
+            <li><NavLink className="nav-link" to="/about">About Us</NavLink></li>
+            <li><NavLink className="nav-link" to="/members">Members</NavLink></li>
+            <li><NavLink className="nav-link" to="/constitution">Constitution</NavLink></li>
+            <li><NavLink className="nav-link" to="/rules">Rules</NavLink></li>
+            <li><NavLink className="nav-link" to="/bets">Bets</NavLink></li>
+            <li><NavLink className="nav-link" to="/signout">Sign Out</NavLink></li>
+            <li><NavLink className="nav-link" to="/profile">KH</NavLink></li>
         </ul>
     )
 }
