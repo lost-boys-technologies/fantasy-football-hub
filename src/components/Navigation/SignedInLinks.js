@@ -6,7 +6,6 @@ import './Navigation.scss';
 const SignedInLinks = () => {
     return (
         <ul className="nav-link-container">
-            <li><NavLink className="nav-link" to="/about">About Us</NavLink></li>
             <li><NavLink className="nav-link" to="/members">Members</NavLink></li>
             <li><NavLink className="nav-link" to="/constitution">Constitution</NavLink></li>
             <li><NavLink className="nav-link" to="/rules">Rules</NavLink></li>

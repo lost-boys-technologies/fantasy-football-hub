@@ -9,7 +9,7 @@ import './Navigation.scss';
 const Navbar = () => {
     return (
         <nav className="nav-link-container">
-                <Link to="/" className="nav-link group-icon">Running Backs of Scotland</Link>
+                <Link to="/" className="nav-link group-name">Running Backs of Scotland</Link>
             <div className="links-container">
                 <SignedInLinks />
                 {/* <SignedOutLinks /> */}

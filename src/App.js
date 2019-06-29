@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navigation/Navbar';
 import Home from './components/Home';
-import About from './components/About';
 import Members from './components/Members';
 import Constitution from './components/Constitution';
 import Rules from './components/Rules';
@@ -19,7 +18,6 @@ const App = () => {
                 <Navbar />
                 <Switch className="route-switch">
                     <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} />
                     <Route path="/members" component={Members} />
                     <Route path="/constitution" component={Constitution} />
                     <Route path="/rules" component={Rules} />
