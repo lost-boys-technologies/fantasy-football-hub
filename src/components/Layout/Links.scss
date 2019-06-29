@@ -1,0 +1,43 @@
+@import '../../variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header-container {
+  background-color: $cyan-blue-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.router-container { width: 100%; }
+
+.nav-link-container {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+
+  li { padding: 0 10px; }
+
+  .nav-link {
+    color: $ivory-color;
+    text-decoration: none;
+  }
+}
+
+.route-switch {
+  padding: 0 10px;
+}

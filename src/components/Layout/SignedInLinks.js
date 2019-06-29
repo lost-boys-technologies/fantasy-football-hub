@@ -1,22 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
-/*
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
-import './index.scss';
-import './App.scss';
-import About from './About';
-import Members from './Members';
-import Constitution from './Constitution';
-import Rules from './Rules';
-import Bets from './Bets';
-import NotFound from './404';
-*/
+import './Links.scss';
 
-/*
-const routing = (
-    <Router>
+import App from '../../App';
+import About from '../About';
+import Members from '../Members';
+import Constitution from '../Constitution';
+import Rules from '../Rules';
+import Bets from '../Bets';
+import NotFound from '../NotFound';
+
+const SignedInLinks = () => {
+    return (
+        <Router>
         <div className="header-container">
             <div className="router-container">
                 <ul className="nav-link-container">
@@ -51,10 +47,7 @@ const routing = (
             <Route component={NotFound}/>
         </Switch>
     </Router>
-)
-*/
+    )
+}
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
+export default SignedInLinks;
