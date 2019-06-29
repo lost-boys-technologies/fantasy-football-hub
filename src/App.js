@@ -10,11 +10,13 @@ import Rules from './components/Rules';
 import Bets from './components/Bets';
 import NotFound from './components/404';
 
+import './App.scss';
+
 const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
-                <Navbar />
+                <Navbar className="nav-bar" />
                 <Switch className="route-switch">
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />

@@ -3,7 +3,7 @@ import './404.scss';
 
 function NotFound() {
     document.addEventListener('DOMContentLoaded', function(e) {
-        document.getElementsByClassName('header-container')[0].style.display = 'none';
+        document.getElementsByClassName('navbar-container')[0].style.display = 'none';
     })
 
     /*
