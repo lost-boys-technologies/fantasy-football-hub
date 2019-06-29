@@ -1,13 +1,16 @@
 import React from 'react';
-import './App.scss';
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="spa-container">
-        <h2>Home</h2>
-        <p>More to come...</p>
-    </div>
-  )
+import Navbar from './components/Navigation/Navbar';
+
+const App = () => {
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Navbar />
+            </div>
+        </BrowserRouter>
+    )
 }
 
 export default App;
