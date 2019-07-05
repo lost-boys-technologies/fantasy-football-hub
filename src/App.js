@@ -9,7 +9,7 @@ import Members from './components/Members';
 import Constitution from './components/Constitution';
 import Rules from './components/Rules';
 import Bets from './components/Bets';
-import BetDetails from './components/Bets/BetDetails';
+// import BetDetails from './components/Bets/BetDetails';
 import NotFound from './components/404';
 
 import './App.scss';
@@ -28,7 +28,7 @@ const App = () => {
                     <Route path="/rules" component={Rules} />
                     <Route path="/bets" component={Bets} />
                     //! Just messing with the below, I will need to rework
-                    <Route path="/betDetail/:id" component={BetDetails} />
+                    {/* <Route path="/betDetail/:id" component={BetDetails} /> */}
                     <Route component={NotFound}/>
                 </Switch>
             </div>
