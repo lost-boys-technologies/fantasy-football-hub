@@ -27,7 +27,7 @@ const App = () => {
                     <Route path="/constitution" component={Constitution} />
                     <Route path="/rules" component={Rules} />
                     <Route path="/bets" component={Bets} />
-                    //! Just messing with the below, I will need to rework
+                    // Just messing with the below, I will need to rework
                     {/* <Route path="/betDetail/:id" component={BetDetails} /> */}
                     <Route component={NotFound}/>
                 </Switch>
