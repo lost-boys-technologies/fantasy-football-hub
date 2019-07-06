@@ -10,43 +10,50 @@ h4 {
     padding: 20px 0;
 }
 
+.bets-list-container {
+    display: flex;
+    flex-basis: 100%;
+}
+
 .pending-bets {
     flex-basis: 50%;
 }
 
 .established-bets {
     flex-basis: 50%;
+}
 
-    .bet-card {
+.bet-card {
+    display: flex;
+    flex-grow: 0;
+    height: 75px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: $light-grey-color;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+
+    .bet-status {
         display: flex;
-        height: 75px;
-        width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        background-color: $light-grey-color;
-        border-radius: 5px;
-        margin: 0 15px;
+        align-items: center;
+        padding: 0 15px;
+        margin: 10px 0;
+        min-width: 85px;
+        border-right: 1px solid $cyan-blue-color;
+    }
 
-        .bet-status {
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            margin: 10px 0;
-            border-right: 1px solid $cyan-blue-color;
+    .bet-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 15px;
+
+        .bettor {
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
-        .bet-details {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-left: 15px;
-
-            .bettor {
-                font-weight: 600;
-                text-transform: uppercase;
-            }
-
-            .bettor-name {}
-        }
-    }    
-} 
+        .bettor-name {}
+    }
+}
