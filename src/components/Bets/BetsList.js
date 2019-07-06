@@ -20,7 +20,7 @@ const BetsList = ({ bets }) => {
                 {pendingBets}
             </div>
             <div className="established-bets">
-                <Typography variant="inherit" component="h4">Established Bets</Typography>'
+                <Typography variant="inherit" component="h4">Established Bets</Typography>
                 {establishedBets}
             </div>
         </div>
