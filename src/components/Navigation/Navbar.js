@@ -12,7 +12,7 @@ const Navbar = () => {
                 <Link to="/" className="nav-link group-name">Running Backs of Scotland</Link>
             <div className="links-container">
                 <SignedInLinks />
-                {/* <SignedOutLinks /> */}
+                <SignedOutLinks />
             </div>
         </nav>
     )
