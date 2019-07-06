@@ -1,15 +1,15 @@
 import React from 'react'
 import { Typography } from '@material-ui/core';
 
-function Bet() {
+function Bet({ bet }) {
     return (
         <div className="bet-card">
             <div className="bet-status">
                 Pending
             </div>
             <div className="bet-details">
-                <Typography variant="inherit" component="span" className="bettor">Bettor</Typography>
-                <Typography variant="inherit" component="span" className="takers">Taker(s)</Typography>
+                <Typography variant="inherit" component="span" className="bettor">Bettor: {bet.bettor}</Typography>
+                <Typography variant="inherit" component="span" className="takers">Taker(s): {bet.takers}</Typography>
             </div>
         </div>
     )

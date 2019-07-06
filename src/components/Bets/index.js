@@ -1,20 +1,24 @@
-import React, { useState }from 'react';
-import Typography from '@material-ui/core/Typography';
+import React, { Component }from 'react';
+import { connect } from 'react-redux';
 import BetsList from './BetsList';
-import Bet from './Bet';
 import './Bets.scss';
 
-const status = {
-  pend: 'PENDING',
-  done: 'COMPLETE',
+class Bets extends Component {
+  render() {
+    const { bets } = this.props;
+
+    return (
+      <div className="bets-container">
+        <BetsList bets={bets} />
+      </div>
+    )
+  }
 }
 
-function Bets() {
-  return (
-    <div className="bets-container">
-      <BetsList />
-    </div>
-  )
+const mapStateToProps = (state) => {
+  return {
+    bets: state.bet.bets
+  }
 }
 
-export default Bets;
+export default connect(mapStateToProps)(Bets);
