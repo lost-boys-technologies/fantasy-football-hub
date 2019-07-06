@@ -1,9 +1,9 @@
 const initState = {
     // Test Data (temporary)
     bets: [
-        {id: 1, bettor: 'Evan', takers: 'Kenny',},
-        {id: 2, bettor: 'Kyle', takers: 'Evan'},
-        {id: 3, bettor: 'Evan', takers: 'Sean'},
+        {id: 1, bettor: 'Evan', takers: ['Kenny', 'Sean']},
+        {id: 2, bettor: 'Kyle', takers: ['Evan']},
+        {id: 3, bettor: 'Evan', takers: ['Kenny', 'Sean', 'Simon', 'Kyle']},
     ]
 };
 
@@ -14,4 +14,4 @@ const betReducer = (state = initState, action) => {
     return state;
 }
 
-export default betReducer;
+export default betReducer
