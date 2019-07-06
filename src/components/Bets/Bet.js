@@ -5,7 +5,7 @@ function Bet({ bet }) {
     return (
         <div className="bet-card">
             <div className="bet-status">
-                Pending
+                {bet.status}
             </div>
             <div className="bet-details">
                 <Typography variant="inherit" component="span" className="bettor">Bettor: {bet.bettor}</Typography>
