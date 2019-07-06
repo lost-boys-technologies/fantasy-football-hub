@@ -1,38 +1,24 @@
-import React, { useState }from 'react';
-import Typography from '@material-ui/core/Typography';
+import React, { Component }from 'react';
+import { connect } from 'react-redux';
+import BetsList from './BetsList';
 import './Bets.scss';
 
-const status = {
-  pend: 'PENDING',
-  done: 'COMPLETE',
-}
+class Bets extends Component {
+  render() {
+    const { bets } = this.props;
 
-function Bets() {
-  const [open, setOpen] = useState(false);
-
-  const toggleModal = () => {
-    setOpen(!setOpen);
+    return (
+      <div className="bets-container">
+        <BetsList bets={bets} />
+      </div>
+    )
   }
-
-  return (
-    <div className="bets-container">
-      <div className="pending-bets">
-        <Typography variant="inherit" component="h4">Pending Bets</Typography>
-      </div>
-      <div className="established-bets">
-      <Typography variant="inherit" component="h4">Established Bets</Typography>
-      <div className="bet-card">
-        <div className='bet-status'>
-          {status.pend}
-        </div>
-        <div className="bet-details">
-          <Typography variant="inherit" component="span" className="bettor">Bettor</Typography>
-          <Typography variant="inherit" component="span" className="bettor-name">Lorem Ipsum</Typography>
-        </div>
-      </div>
-      </div>
-    </div>
-  )
 }
 
-export default Bets;
+const mapStateToProps = (state) => {
+  return {
+    bets: state.bet.bets
+  }
+}
+
+export default connect(mapStateToProps)(Bets);
