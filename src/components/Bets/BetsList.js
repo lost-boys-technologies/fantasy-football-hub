@@ -3,22 +3,27 @@ import { Typography } from '@material-ui/core';
 import Bet from './Bet';
 
 const BetsList = ({ bets }) => {
+    const pendingBets = [], establishedBets = [];
+
+    bets.forEach((bet) => {
+        if (bet.pending) {
+            pendingBets.push(<Bet bet={bet} key={bet.id} />)
+        } else {
+            establishedBets.push(<Bet bet={bet} key={bet.id} />)
+        }
+    })
+
     return (
-        // TODO: Dynamically handle the the className between "pending-bet" and "established-bet"
-        // that will put the the bet card either on the left or the right of the bets-container
-        <React.Fragment>
+        <div className="bets-list-container">
             <div className="pending-bets">
                 <Typography variant="inherit" component="h4">Pending Bets</Typography>
+                {pendingBets}
             </div>
             <div className="established-bets">
                 <Typography variant="inherit" component="h4">Established Bets</Typography>
-                {bets && bets.map(bet => {
-                    return (
-                        <Bet bet={bet} key={bet.id} />
-                    );
-                })}
+                {establishedBets}
             </div>
-        </React.Fragment>
+        </div>
     )
 }
 
