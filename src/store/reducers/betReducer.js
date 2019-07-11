@@ -5,6 +5,9 @@ const initState = {
         {id: 1, status: 'PENDING', pending: true, bettor: 'Evan', takers: ['Kenny', 'Sean']},
         {id: 2, status: 'COMPLETE', pending: false, bettor: 'Kyle', takers: ['Evan']},
         {id: 3, status: 'PENDING', pending: false, bettor: 'Evan', takers: ['Kenny', 'Sean', 'Simon', 'Kyle']},
+        {id: 4, status: 'PENDING', pending: false, bettor: 'Evan', takers: ['Kenny', 'Sean', 'Simon', 'Kyle']},
+        {id: 5, status: 'PENDING', pending: true, bettor: 'Evan', takers: ['Kenny', 'Sean', 'Simon', 'Kyle']},
+        {id: 6, status: 'PENDING', pending: false, bettor: 'Evan', takers: ['Kenny', 'Sean', 'Simon', 'Kyle']},
     ]
 };
 
