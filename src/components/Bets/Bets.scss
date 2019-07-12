@@ -1,5 +1,13 @@
 @import '../../variables';
 
+//* Expansion Panel Overrides
+.MuiExpansionPanelSummary-content { align-items: center; }
+
+.MuiExpansionPanel-root.Mui-expanded {
+    margin: 0 15px 15px 15px !important;
+}
+//* Expansion Panel Overrides
+
 .bets-container {
     display: flex;
     width: 100%;
@@ -26,34 +34,42 @@ h4 {
 .bet-card {
     display: flex;
     flex-grow: 0;
-    height: 75px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: $light-grey-color;
     border-radius: 5px;
-    margin: 15px;
-    padding: 15px;
+    margin: 0 15px 15px 15px;
 
     .bet-status {
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 0 15px;
         margin: 10px 0;
-        min-width: 85px;
-        border-right: 1px solid $cyan-blue-color;
+        height: 30px;
+        min-width: 120px;
+        border-right: 2px solid $cyan-blue-color;
     }
 
     .bet-details {
         display: flex;
-        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding-left: 15px;
+
+        .bettors-and-takers {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
 
         .bettor {
             font-weight: 600;
             text-transform: uppercase;
         }
-
-        .bettor-name {}
     }
 }
