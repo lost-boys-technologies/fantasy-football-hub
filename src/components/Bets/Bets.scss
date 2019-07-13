@@ -8,6 +8,13 @@
 }
 //* Expansion Panel Overrides
 
+.countdown {
+    min-width: 99px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
 .bets-container {
     display: flex;
     width: 100%;
@@ -38,9 +45,9 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $light-grey-color;
     border-radius: 5px;
     margin: 0 15px 15px 15px;
+    background-color: $light-grey-color !important;
 
     .bet-status {
         display: flex;

@@ -4,7 +4,8 @@ const initState = {
 	bets: [
 		{
 			id: 1,
-			startDate: 'this',
+			startDate: 1562966809,
+			betTerm: 2,
 			status: 'IN PROGRESS',
 			pending: true,
 			bettor: 'Evan',
@@ -12,7 +13,8 @@ const initState = {
 		},
 		{
 			id: 2,
-			startDate: 'this',
+			startDate: 1562966809,
+			betTerm: 1,
 			status: 'COMPLETE',
 			pending: false,
 			bettor: 'Kyle',
@@ -20,7 +22,8 @@ const initState = {
 		},
 		{
 			id: 3,
-			startDate: 'this',
+			startDate: 1562966809,
+			betTerm: 2,
 			status: 'IN PROGRESS',
 			pending: false,
 			bettor: 'Evan',
@@ -28,7 +31,8 @@ const initState = {
 		},
 		{
 			id: 4,
-			startDate: 'this',
+			startDate: 1562966809,
+			betTerm: 3,
 			status: 'IN PROGRESS',
 			pending: false,
 			bettor: 'Evan',
@@ -36,7 +40,8 @@ const initState = {
 		},
 		{
 			id: 5,
-			startDate: 'this',
+			startDate: 1562966809,
+			betTerm: 2,
 			status: 'IN PROGRESS',
 			pending: false,
 			bettor: 'Evan',
@@ -44,7 +49,8 @@ const initState = {
 		},
 		{
 			id: 6,
-			startDate: 'this',
+			startDate: 1562959560,
+			betTerm: 4,
 			status: 'IN PROGRESS',
 			pending: true,
 			bettor: 'Kenny',

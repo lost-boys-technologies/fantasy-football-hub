@@ -10,7 +10,7 @@ function Bet({ bet }) {
 	let status = bet.status;
 
 	if (pending) {
-		status = <Countdown />;
+		status = <Countdown bet={bet} />;
 	}
 
 	return (
