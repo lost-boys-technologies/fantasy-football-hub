@@ -1,50 +1,75 @@
 import React, { Component } from 'react';
-import { Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 
 class Countdown extends Component {
-	constructor(props) {
-		super(props);
-
-		// TODO: Format --> 3d 10h 30m
+	constructor({ bet }) {
+		super(bet);
+		const secondsInADay = 86400;
+		const convertedBetTerm = secondsInADay * bet.betTerm;
+		const calculatedStartDate = bet.startDate + convertedBetTerm;
+		const timeSince = new Date().getTime() / 1000;
+		const betTermInSeconds = calculatedStartDate - timeSince;
 
 		this.state = {
-			minutes: '',
-			hours: '',
-			days: '',
-        };
-        
-        this.daysRemaining;
-        this.hoursRemaining
-        this.minutesRemaining;
-        this.intervalHandle;
-        this.handleChange = this.handleChange.bind(this);
-        this.startCountDown = this.startCountDown.bind(this);
-        this.tick = this.tick.bind(this);
+			time: {},
+			seconds: betTermInSeconds,
+			startDate: bet.startDate,
+		};
+
+		this.timer = 0;
+		this.startTimer = this.startTimer.bind(this);
+		this.countDown = this.countDown.bind(this);
 	}
 
-    handleChange(event) {
-        this.setState({
-            days: event.target.value,
-        });
-    }
+	secondsToTime(secs) {
+		let hours = Math.floor(secs / (60 * 60));
 
-    tick() {
-        let day = Math.floor(this.hoursRemaining / 24);
-        let hour = Math.floor(this.)
-        let min = Math.floor(this.minutesRemaining / 60);
-        let sec = this.minutesRemaining - (hour * 60);
+		let divisor_for_minutes = secs % (60 * 60);
+		let minutes = Math.floor(divisor_for_minutes / 60);
 
-        this.setState({
-            days: 
-        })
-    }
+		let divisor_for_seconds = divisor_for_minutes % 60;
+		let seconds = Math.ceil(divisor_for_seconds);
+
+		let obj = {
+			h: hours,
+			m: minutes,
+			s: seconds,
+		};
+		return obj;
+	}
+
+	componentDidMount() {
+		let timeLeftVar = this.secondsToTime(this.state.seconds);
+		this.setState({ time: timeLeftVar });
+		this.startTimer();
+	}
+
+	startTimer() {
+		if (this.timer === 0 && this.state.seconds > 0) {
+			this.timer = setInterval(this.countDown, 1000);
+		}
+	}
+
+	countDown() {
+		let seconds = this.state.seconds - 1;
+		this.setState({
+			time: this.secondsToTime(seconds),
+			seconds: seconds,
+		});
+
+		if (seconds === 0) {
+			clearInterval(this.timer);
+			// TODO Do check for how many takers there are and post to to DB that pending is false
+		}
+	}
 
 	render() {
 		return (
-			<div>
-				<Typography variant="inherit" component="h3">
-					{this.state.days}d {this.state.hours}h {this.state.minutes}m
-				</Typography>
+			<div className="countdown">
+				<Box variant="inherit" component="span" fontWeight="fontWeightBold">
+					Time Left
+				</Box>
+				{this.state.time.h}h {this.state.time.m}m {this.state.time.s}s
 			</div>
 		);
 	}
