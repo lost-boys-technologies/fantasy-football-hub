@@ -3,7 +3,7 @@ import { Box } from '@material-ui/core';
 
 class Countdown extends Component {
 	constructor({ bet }) {
-		super(bet);
+		super({ bet });
 		const secondsInADay = 86400;
 		const convertedBetTerm = secondsInADay * bet.betTerm;
 		const calculatedStartDate = bet.startDate + convertedBetTerm;

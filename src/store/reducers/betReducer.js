@@ -1,6 +1,5 @@
 const initState = {
 	// Test Data (temporary)
-	// TODO: Figure out better status value name
 	bets: [
 		{
 			id: 1,
