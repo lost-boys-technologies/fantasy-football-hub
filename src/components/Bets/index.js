@@ -3,12 +3,9 @@ import { connect } from 'react-redux';
 import AddIcon from '@material-ui/icons/Add';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 
 import BetsList from './BetsList';
+import CreateBet from './CreateBet';
 import './Bets.scss';
 
 class Bets extends Component {
@@ -16,7 +13,7 @@ class Bets extends Component {
 		super(props);
 
 		this.state = {
-			dialogOpen: false,
+			dialogOpen: true, //! switch to false after testing
 		};
 	}
 
@@ -39,8 +36,7 @@ class Bets extends Component {
 					Create Bet
 				</Button>
 				<Dialog open={this.state.dialogOpen} onClose={this.toggleDialog}>
-					asdfasdf
-					<DialogActions onClick={this.toggleDialog}>Cancel</DialogActions>
+					<CreateBet toggleDialog={this.toggleDialog} />
 				</Dialog>
 				<BetsList bets={bets} />
 			</div>
