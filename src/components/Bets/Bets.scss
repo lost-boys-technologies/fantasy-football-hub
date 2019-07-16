@@ -17,7 +17,18 @@
 
 .bets-container {
     display: flex;
+    position: relative;
     width: 100%;
+
+    .create-bet-btn {
+        position: absolute;
+        right: 0;
+        margin: 10px 15px 10px;
+
+        .add-icon {
+            width: 20px;
+        }
+    }
 }
 
 h4 {

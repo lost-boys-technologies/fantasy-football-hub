@@ -1,10 +1,9 @@
 const initState = {
 	// Test Data (temporary)
-	// TODO: Figure out better status value name
 	bets: [
 		{
 			id: 1,
-			startDate: 1562966809,
+			startDate: 1563247240,
 			betTerm: 2,
 			status: 'IN PROGRESS',
 			pending: true,
@@ -18,7 +17,7 @@ const initState = {
 			status: 'COMPLETE',
 			pending: false,
 			bettor: 'Kyle',
-			takers: ['Evan'],
+			takers: ['Everyone'],
 		},
 		{
 			id: 3,
@@ -31,7 +30,7 @@ const initState = {
 		},
 		{
 			id: 4,
-			startDate: 1562966809,
+			startDate: 1562986809,
 			betTerm: 3,
 			status: 'IN PROGRESS',
 			pending: false,

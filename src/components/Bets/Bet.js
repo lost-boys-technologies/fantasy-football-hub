@@ -25,11 +25,8 @@ function Bet({ bet }) {
 						{status}
 					</Typography>
 					<div className="bettors-and-takers">
-						<Typography variant="inherit" component="span" className="bettor">
-							Bettor: {bet.bettor}
-						</Typography>
-						<Typography variant="inherit" component="span" className="takers">
-							Taker(s): {bet.takers}
+						<Typography variant="inherit" component="span">
+							{bet.bettor} is challenging {bet.takers}
 						</Typography>
 					</div>
 				</ExpansionPanelSummary>
