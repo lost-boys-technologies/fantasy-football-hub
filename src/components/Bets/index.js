@@ -13,7 +13,7 @@ class Bets extends Component {
 		super(props);
 
 		this.state = {
-			dialogOpen: true, //! switch to false after testing
+			dialogOpen: false,
 		};
 	}
 
