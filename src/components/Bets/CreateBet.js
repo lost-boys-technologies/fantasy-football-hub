@@ -20,7 +20,7 @@ export class CreateBet extends Component {
 
 	handleSubmit = e => {
 		e.preventDefault();
-		this.props.createProject(this.state);
+		this.props.createBet(this.state);
 	};
 
 	render() {
@@ -30,25 +30,23 @@ export class CreateBet extends Component {
 			<React.Fragment>
 				<DialogTitle>Create Your Bet</DialogTitle>
 				<DialogContent>
-					<form classname="create-bet-form" onSubmit={this.handleSubmit}>
-						<TextField
-							id="filled-name"
-							label="Name"
-							className="bet-title"
-							onChange={this.handleChange}
-							margin="normal"
-							variant="filled"
-						/>
+					<form onSubmit={this.handleSubmit}>
+						<h5 className="grey-text text-darken-3">Create Your Bet</h5>
+						<div className="input-field">
+							<label htmlFor="title">Title</label>
+							<input type="text" id="title" onChange={this.handleChange} />
+						</div>
+						<div className="input-field">
+							<label htmlFor="content">Content</label>
+							<textarea id="content" onChange={this.handleChange} />
+							<label htmlFor="theGuys">The Guys</label>
+							<textarea id="theGuys" onChange={this.handleChange} />
+						</div>
+						<div className="input-field">
+							<button onClick={toggleDialog}>Create</button>
+						</div>
 					</form>
 				</DialogContent>
-				<DialogActions>
-					<Button onClick={toggleDialog} color="primary">
-						Save
-					</Button>
-					<Button onClick={toggleDialog} color="secondary">
-						Cancel
-					</Button>
-				</DialogActions>
 			</React.Fragment>
 		);
 	}

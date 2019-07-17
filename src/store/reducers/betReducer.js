@@ -62,8 +62,13 @@ const betReducer = (state = initState, action) => {
 	switch (action.type) {
 		case 'CREATE_BET':
 			console.log('created bet', action.bet);
+			return state;
+		case 'CREATE_BET_ERR':
+			console.log('create bet error', action.err);
+			return state;
+		default:
+			return state;
 	}
-	return state;
 };
 
 export default betReducer;
