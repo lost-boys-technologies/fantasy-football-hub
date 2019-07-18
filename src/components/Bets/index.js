@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
+
 import AddIcon from '@material-ui/icons/Add';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -50,4 +53,7 @@ const mapStateToProps = state => {
 	};
 };
 
-export default connect(mapStateToProps)(Bets);
+export default compose(
+	connect(mapStateToProps),
+	firestoreConnect([{ collection: 'bets' }]),
+)(Bets);

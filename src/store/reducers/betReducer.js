@@ -3,7 +3,7 @@ const initState = {
 	bets: [
 		{
 			id: 1,
-			startDate: 1563247240,
+			startDate: 1563251240,
 			betTerm: 2,
 			status: 'IN PROGRESS',
 			pending: true,
@@ -48,7 +48,7 @@ const initState = {
 		},
 		{
 			id: 6,
-			startDate: 1562989560,
+			startDate: 1563251240,
 			betTerm: 4,
 			status: 'IN PROGRESS',
 			pending: true,
