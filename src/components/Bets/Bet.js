@@ -1,8 +1,6 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 import Countdown from '../Countdown';
 
 function Bet({ bet }) {
@@ -14,20 +12,34 @@ function Bet({ bet }) {
 	}
 
 	return (
-		<div id="BetCard">
-			<ExpansionPanel className="bet-card">
+		<div id='BetCard'>
+			<Accordion defaultActiveKey='0'>
+				<Card>
+					<Accordion.Toggle as={Card.Header} eventKey='0'>
+						Click me!
+					</Accordion.Toggle>
+					<Accordion.Collapse eventKey='0'>
+						<Card.Body>Hello! I'm the body</Card.Body>
+					</Accordion.Collapse>
+				</Card>
+				<Card>
+					<Accordion.Toggle as={Card.Header} eventKey='1'>
+						Click me!
+					</Accordion.Toggle>
+					<Accordion.Collapse eventKey='1'>
+						<Card.Body>Hello! I'm another body</Card.Body>
+					</Accordion.Collapse>
+				</Card>
+			</Accordion>
+			{/* <ExpansionPanel className='bet-card'>
 				<ExpansionPanelSummary
-					aria-controls="panel1a-content"
-					id="panel1a-header"
-					className="bet-details"
+					aria-controls='panel1a-content'
+					id='panel1a-header'
+					className='bet-details'
 				>
-					<Typography variant="inherit" component="span" className="bet-status">
-						{status}
-					</Typography>
-					<div className="bettors-and-takers">
-						<Typography variant="inherit" component="span">
-							{bet.bettor} is challenging {bet.takers}
-						</Typography>
+					{status}
+					<div className='bettors-and-takers'>
+						{bet.bettor} is challenging {bet.takers}
 					</div>
 				</ExpansionPanelSummary>
 				<ExpansionPanelDetails>
@@ -43,7 +55,7 @@ function Bet({ bet }) {
 					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 					cupidatat non proident, sunt in culpa qui officia deserunt mollit
 				</ExpansionPanelDetails>
-			</ExpansionPanel>
+			</ExpansionPanel> */}
 		</div>
 	);
 }

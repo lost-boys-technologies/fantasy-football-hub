@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Box } from '@material-ui/core';
 
 class Countdown extends Component {
 	constructor({ bet }) {
@@ -65,10 +64,8 @@ class Countdown extends Component {
 
 	render() {
 		return (
-			<div className="countdown">
-				<Box variant="inherit" component="span" fontWeight="fontWeightBold">
-					Time Left
-				</Box>
+			<div className='countdown'>
+				Time Left
 				{this.state.time.h}h {this.state.time.m}m {this.state.time.s}s
 			</div>
 		);

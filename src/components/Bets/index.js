@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import AddIcon from '@material-ui/icons/Add';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
+import Button from 'react-bootstrap/Button';
+import Dialog from 'react-bootstrap/Modal'; //! Rename to Modal
 
 import BetsList from './BetsList';
 import CreateBet from './CreateBet';
@@ -13,7 +12,7 @@ class Bets extends Component {
 		super(props);
 
 		this.state = {
-			dialogOpen: true, //! switch to false after testing
+			dialogOpen: false, //! switch to true for development
 		};
 	}
 
@@ -25,14 +24,14 @@ class Bets extends Component {
 		const { bets } = this.props;
 
 		return (
-			<div className="bets-container">
+			<div className='bets-container'>
 				<Button
 					onClick={this.toggleDialog}
-					variant="outlined"
-					color="default"
-					className="create-bet-btn"
+					variant='outlined'
+					color='default'
+					className='create-bet-btn'
 				>
-					<AddIcon className="add-icon" />
+					<i class='fas fa-plus'></i>
 					Create Bet
 				</Button>
 				<Dialog open={this.state.dialogOpen} onClose={this.toggleDialog}>

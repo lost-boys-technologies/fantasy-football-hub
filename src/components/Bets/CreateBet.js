@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import Button from '@material-ui/core/Button';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import TextField from '@material-ui/core/TextField';
+import Button from 'react-bootstrap/Button';
 
 export default function CreateBet(props) {
 	const [values, setValues] = useState({});
@@ -16,28 +12,28 @@ export default function CreateBet(props) {
 
 	return (
 		<React.Fragment>
-			<DialogTitle>Create Your Bet</DialogTitle>
-			<DialogContent>
-				<form classname="create-bet-form" autoComplete="on">
-					<TextField
-						id="filled-name"
-						label="Name"
-						className="bet-title"
+			<p>Create Your Bet</p>
+			<div>
+				<form classname='create-bet-form' autoComplete='on'>
+					<textarea
+						id='filled-name'
+						label='Name'
+						className='bet-title'
 						value={values.name}
 						onChange={handleChange('name')}
-						margin="normal"
-						variant="filled"
+						margin='normal'
+						variant='filled'
 					/>
 				</form>
-			</DialogContent>
-			<DialogActions>
-				<Button onClick={toggleDialog} color="primary">
+			</div>
+			<div>
+				<Button onClick={toggleDialog} color='primary'>
 					Save
 				</Button>
-				<Button onClick={toggleDialog} color="secondary">
+				<Button onClick={toggleDialog} color='secondary'>
 					Cancel
 				</Button>
-			</DialogActions>
+			</div>
 		</React.Fragment>
 	);
 }
