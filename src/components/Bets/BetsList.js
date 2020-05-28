@@ -6,7 +6,11 @@ const BetsList = ({ bets }) => {
 	const pendingBets = [],
 		establishedBets = [];
 
-	bets.forEach(bet => {
+	var tempBets = [];
+
+	//* bets.forEach
+
+	tempBets.forEach(bet => {
 		if (bet.pending) {
 			pendingBets.push(<Bet bet={bet} key={bet.id} />);
 		} else {

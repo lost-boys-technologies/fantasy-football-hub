@@ -16,7 +16,7 @@ class Bets extends Component {
 		super(props);
 
 		this.state = {
-			dialogOpen: false,
+			dialogOpen: true, //! Return to false after testing
 		};
 	}
 
@@ -49,7 +49,7 @@ class Bets extends Component {
 
 const mapStateToProps = state => {
 	return {
-		bets: state.bet.bets,
+		bets: state.firestore.ordered.bets,
 	};
 };
 

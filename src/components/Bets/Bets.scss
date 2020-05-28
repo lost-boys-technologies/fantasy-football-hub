@@ -91,3 +91,19 @@ h4 {
         }
     }
 }
+
+//* Create Bet Form
+.create-bet-container {
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h6 { text-align: center; }
+
+    .input-field {
+
+        &.bet-term { width: 100px; }
+    }
+}

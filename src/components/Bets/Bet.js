@@ -10,8 +10,11 @@ function Bet({ bet }) {
 	let status = bet.status;
 
 	if (pending) {
+		console.log('bet.createdAt', bet.createdAt.seconds);
 		status = <Countdown bet={bet} />;
 	}
+
+	// console.log('bets', bet);
 
 	return (
 		<div id="BetCard">

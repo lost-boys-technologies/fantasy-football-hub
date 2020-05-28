@@ -4,7 +4,9 @@ import { Box } from '@material-ui/core';
 class Countdown extends Component {
 	constructor({ bet }) {
 		super(bet);
-		const secondsInADay = 86400;
+		// TODO need to change bet.startDate to bet.createdAt.seconds (per firebase DB)
+		// TODO update the firebase to include 1) Bet Term
+		const secondsInADay = 86400; //! Might not need this because createdAt looks like it will handle it
 		const convertedBetTerm = secondsInADay * bet.betTerm;
 		const calculatedStartDate = bet.startDate + convertedBetTerm;
 		const timeSince = new Date().getTime() / 1000;

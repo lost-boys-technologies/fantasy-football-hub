@@ -15,25 +15,25 @@ import NotFound from './components/404';
 import './App.scss';
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <div className="App">
-                <Navbar />
-                <Switch className="route-switch">
-                    <Route exact path="/" component={Home} />
-                    <Route path="/signin" component={SignIn} />
-                    <Route path="/signup" component={SignUp} />
-                    <Route path="/members" component={Members} />
-                    <Route path="/constitution" component={Constitution} />
-                    <Route path="/rules" component={Rules} />
-                    <Route path="/bets" component={Bets} />
-                    // Just messing with the below, I will need to rework
-                    {/* <Route path="/betDetail/:id" component={BetDetails} /> */}
-                    <Route component={NotFound}/>
-                </Switch>
-            </div>
-        </BrowserRouter>
-    )
-}
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<Navbar />
+				<Switch className="route-switch">
+					<Route exact path="/" component={Home} />
+					<Route path="/signin" component={SignIn} />
+					<Route path="/signup" component={SignUp} />
+					<Route path="/members" component={Members} />
+					<Route path="/constitution" component={Constitution} />
+					<Route path="/rules" component={Rules} />
+					<Route path="/bets" component={Bets} />
+					// Just messing with the below, I will need to rework
+					{/* <Route path="/betDetail/:id" component={BetDetails} /> */}
+					<Route component={NotFound} />
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
+};
 
 export default App;
