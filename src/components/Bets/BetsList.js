@@ -1,5 +1,4 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
 import Bet from './Bet';
 
 const BetsList = ({ bets }) => {
@@ -15,17 +14,13 @@ const BetsList = ({ bets }) => {
 	});
 
 	return (
-		<div className="bets-list-container">
-			<div className="pending-bets">
-				<Typography variant="inherit" component="h4">
-					Pending Bets
-				</Typography>
+		<div className='bets-list-container'>
+			<div className='pending-bets'>
+				Pending Bets
 				{pendingBets}
 			</div>
-			<div className="established-bets">
-				<Typography variant="inherit" component="h4">
-					Established Bets
-				</Typography>
+			<div className='established-bets'>
+				Established Bets
 				{establishedBets}
 			</div>
 		</div>
